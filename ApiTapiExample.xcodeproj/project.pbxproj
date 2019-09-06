@@ -219,6 +219,7 @@
 				"${BUILT_PRODUCTS_DIR}/ApiTapiAB/ApiTapiAB.framework",
 				"${BUILT_PRODUCTS_DIR}/ApiTapiID/ApiTapiID.framework",
 				"${BUILT_PRODUCTS_DIR}/ApiTapiPurchases/ApiTapiPurchases.framework",
+				"${PODS_ROOT}/IncentCleaner/IncentCleaner.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -228,6 +229,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ApiTapiAB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ApiTapiID.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ApiTapiPurchases.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IncentCleaner.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

@@ -8,6 +8,7 @@
 
 import UIKit
 import Amplitude_iOS
+import IncentCleaner
 
 private let amplitudeApiKey: String = "72a4d3e2293bb546f92f2e78930ac13c"
 
@@ -23,11 +24,17 @@ struct Analytics {
 
   // MARK: Activation
 
+  static func activate() {
+    IncentCleaner.activate()
+  }
+
   static func activateAfterApplicationDidFinishLaunching(_ application: UIApplication,
                                                          launchOptions: [UIApplication.LaunchOptionsKey: Any]?,
                                                          identifier: String) {
-    Amplitude.instance().initializeApiKey(amplitudeApiKey)
-    Amplitude.instance()?.setDeviceId(identifier)
+    IncentCleaner.doIfNonIncent(type: .initial) {
+      Amplitude.instance().initializeApiKey(amplitudeApiKey)
+      Amplitude.instance()?.setDeviceId(identifier)
+    }
   }
 
   static func activateAfterApplicationDidBecomeActive(_ application: UIApplication) {}
@@ -35,13 +42,17 @@ struct Analytics {
   // MARK: User properties
 
   static func setUserProperties(_ props: [String: Any]) {
-    Amplitude.instance()?.setUserProperties(props)
+    IncentCleaner.doIfNonIncent(type: .pre) {
+      Amplitude.instance()?.setUserProperties(props)
+    }
   }
 
   // MARK: Events
 
   static func log(_ event: AnalyticsEvent) {
-    Amplitude.instance().logEvent(event.rawValue)
+    IncentCleaner.doIfNonIncent {
+      Amplitude.instance().logEvent(event.rawValue)
+    }
   }
 
 }

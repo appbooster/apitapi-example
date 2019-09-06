@@ -3,12 +3,14 @@ PODS:
   - ApiTapiAB (1.0.0)
   - ApiTapiID (1.0.0)
   - ApiTapiPurchases (1.0.0)
+  - IncentCleaner (1.0.0)
 
 DEPENDENCIES:
   - Amplitude-iOS
   - ApiTapiAB
   - ApiTapiID
   - ApiTapiPurchases
+  - IncentCleaner
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -16,13 +18,15 @@ SPEC REPOS:
     - ApiTapiAB
     - ApiTapiID
     - ApiTapiPurchases
+    - IncentCleaner
 
 SPEC CHECKSUMS:
   Amplitude-iOS: a0347ab05f2d196e6bbb22cc6f62eea33b5a035b
   ApiTapiAB: 1c07440ca0952c89e8e6b2e273da0d946dc9f9c9
   ApiTapiID: 09665fd77437c5bff570dbfcac2734732294a3f8
   ApiTapiPurchases: f1c9ff11259449f142049a4ec2e98e27137fea53
+  IncentCleaner: 2471a121aae0ef025357c7504e81eb1166133695
 
-PODFILE CHECKSUM: 1dca12d31051d82ab0bfb1de7e450807ac0eb90b
+PODFILE CHECKSUM: 97b01180eea1ae59d1d37b736d1aaeef4809962a
 
 COCOAPODS: 1.6.1

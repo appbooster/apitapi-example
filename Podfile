@@ -8,5 +8,6 @@ target 'ApiTapiExample' do
   pod 'ApiTapiID'
   pod 'ApiTapiPurchases'
   pod 'ApiTapiAB'
+  pod 'IncentCleaner'
 
 end

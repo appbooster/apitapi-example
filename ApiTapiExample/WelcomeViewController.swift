@@ -44,6 +44,7 @@ class WelcomeViewController: ShakeToResetDeviceTokenViewController {
         log("[ApiTapiExample] User properties: \(ApiTapi.userProperties.debugDescription)")
 
         Analytics.setUserProperties(ApiTapi.userProperties)
+        Analytics.activate()
 
         self.toPaywallButton.isEnabled = true
       }
