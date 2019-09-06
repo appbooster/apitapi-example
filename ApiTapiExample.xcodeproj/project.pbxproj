@@ -13,6 +13,7 @@
 		4334CF57231E935E004AEB60 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4334CF56231E935E004AEB60 /* State.swift */; };
 		434B39CA231FADAC0004CA99 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434B39C9231FADAC0004CA99 /* LogViewController.swift */; };
 		434B39FF23227A670004CA99 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434B39FE23227A670004CA99 /* Store.swift */; };
+		434B3A1D2322A0B90004CA99 /* ApiTapi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434B3A1C2322A0B90004CA99 /* ApiTapi.swift */; };
 		43C9AE0D231E8A3F00FFD39A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C9AE0C231E8A3F00FFD39A /* AppDelegate.swift */; };
 		43C9AE12231E8A3F00FFD39A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43C9AE10231E8A3F00FFD39A /* Main.storyboard */; };
 		43C9AE14231E8A4000FFD39A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43C9AE13231E8A4000FFD39A /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 		4334CF56231E935E004AEB60 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		434B39C9231FADAC0004CA99 /* LogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
 		434B39FE23227A670004CA99 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		434B3A1C2322A0B90004CA99 /* ApiTapi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiTapi.swift; sourceTree = "<group>"; };
 		43C9AE09231E8A3F00FFD39A /* ApiTapiExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApiTapiExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C9AE0C231E8A3F00FFD39A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43C9AE11231E8A3F00FFD39A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				4334CF56231E935E004AEB60 /* State.swift */,
 				434B39C9231FADAC0004CA99 /* LogViewController.swift */,
 				434B39FE23227A670004CA99 /* Store.swift */,
+				434B3A1C2322A0B90004CA99 /* ApiTapi.swift */,
 			);
 			path = ApiTapiExample;
 			sourceTree = "<group>";
@@ -213,12 +216,14 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ApiTapiExample/Pods-ApiTapiExample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Amplitude-iOS/Amplitude_iOS.framework",
+				"${BUILT_PRODUCTS_DIR}/ApiTapiID/ApiTapiID.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Amplitude_iOS.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ApiTapiID.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -232,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				434B3A1D2322A0B90004CA99 /* ApiTapi.swift in Sources */,
 				4334CF51231E9039004AEB60 /* WelcomeViewController.swift in Sources */,
 				43C9AE0D231E8A3F00FFD39A /* AppDelegate.swift in Sources */,
 				434B39FF23227A670004CA99 /* Store.swift in Sources */,

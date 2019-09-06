@@ -14,9 +14,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    ApiTapi.configure()
+
+    log("[ApiTapiExample] Device token: \(ApiTapi.deviceToken)")
+
     Analytics.activateAfterApplicationDidFinishLaunching(application,
                                                          launchOptions: launchOptions,
-                                                         identifier: UUID().uuidString)
+                                                         identifier: ApiTapi.deviceToken)
     
     if State.hasLaunchedBefore {
       Analytics.log(.sessionStart)

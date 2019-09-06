@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import ApiTapiID
 
-class WelcomeViewController: UIViewController {
+class WelcomeViewController: ShakeToResetDeviceTokenViewController {
 
   @IBOutlet private weak var toPaywallButton: UIButton!
   @IBOutlet private weak var infoLabel: UILabel!
@@ -20,7 +21,7 @@ class WelcomeViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    infoLabel.text = "This app demonstrates how ApiTapi works."
+    infoLabel.text = "This app demonstrates how ApiTapi works.\n\nCurrent device token is\n\(ApiTapi.deviceToken)"
   }
 
   override func viewDidAppear(_ animated: Bool) {

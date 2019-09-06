@@ -5,5 +5,6 @@ use_frameworks!
 target 'ApiTapiExample' do
   
   pod 'Amplitude-iOS'
+  pod 'ApiTapiID'
 
 end
