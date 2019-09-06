@@ -20,6 +20,12 @@ class PaywallViewController: UIViewController {
 
   // MARK: UIViewController
 
+  override func viewDidLoad() {
+    super.viewDidLoad()
+
+    testLabel.text = ApiTapi.paywall.rawValue
+  }
+
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
 

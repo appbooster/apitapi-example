@@ -32,6 +32,12 @@ struct Analytics {
 
   static func activateAfterApplicationDidBecomeActive(_ application: UIApplication) {}
 
+  // MARK: User properties
+
+  static func setUserProperties(_ props: [String: Any]) {
+    Amplitude.instance()?.setUserProperties(props)
+  }
+
   // MARK: Events
 
   static func log(_ event: AnalyticsEvent) {

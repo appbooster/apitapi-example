@@ -216,6 +216,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ApiTapiExample/Pods-ApiTapiExample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Amplitude-iOS/Amplitude_iOS.framework",
+				"${BUILT_PRODUCTS_DIR}/ApiTapiAB/ApiTapiAB.framework",
 				"${BUILT_PRODUCTS_DIR}/ApiTapiID/ApiTapiID.framework",
 				"${BUILT_PRODUCTS_DIR}/ApiTapiPurchases/ApiTapiPurchases.framework",
 			);
@@ -224,6 +225,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Amplitude_iOS.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ApiTapiAB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ApiTapiID.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ApiTapiPurchases.framework",
 			);
