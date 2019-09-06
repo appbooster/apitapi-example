@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9QE-aJ-2Yq">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="JOZ-Xf-oLf">
+            <objects>
+                <navigationController id="YaH-M5-Jvm" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CEl-yE-ylg">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="wlC-3W-xPq" kind="relationship" relationship="rootViewController" id="0QV-xO-nM8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fB2-cK-E7D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="496" y="-254"/>
+        </scene>
+        <!--Log View Controller-->
+        <scene sceneID="OfD-HX-VGP">
+            <objects>
+                <viewController id="wlC-3W-xPq" customClass="LogViewController" customModule="ApiTapiExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lcR-is-h5S">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aR8-ZF-qi0">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aR8-ZF-qi0" firstAttribute="top" secondItem="ip2-Vq-eM8" secondAttribute="top" id="LJR-7c-lxC"/>
+                            <constraint firstItem="ip2-Vq-eM8" firstAttribute="trailing" secondItem="aR8-ZF-qi0" secondAttribute="trailing" id="M9j-Hc-8EP"/>
+                            <constraint firstItem="aR8-ZF-qi0" firstAttribute="leading" secondItem="ip2-Vq-eM8" secondAttribute="leading" id="dUb-Lm-KVY"/>
+                            <constraint firstItem="ip2-Vq-eM8" firstAttribute="bottom" secondItem="aR8-ZF-qi0" secondAttribute="bottom" id="lNJ-pn-csP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ip2-Vq-eM8"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Z51-KO-2qk">
+                        <barButtonItem key="leftBarButtonItem" id="OwS-E6-s1W">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="E32-7l-JMj">
+                                <rect key="frame" x="20" y="7" width="44" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="close" destination="wlC-3W-xPq" eventType="touchUpInside" id="Dg2-GD-0tb"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="trash" id="Fwe-SA-riF">
+                                <connections>
+                                    <action selector="clear" destination="wlC-3W-xPq" id="7FY-GW-I9E"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="refresh" id="n9Z-D7-zUd">
+                                <connections>
+                                    <action selector="refresh" destination="wlC-3W-xPq" id="Dyf-KL-sGW"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="textView" destination="aR8-ZF-qi0" id="Idb-Ea-Zzl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hLU-gS-d18" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1345" y="-254"/>
+        </scene>
+        <!--Welcome-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="ApiTapiExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbb-J8-N8P">
+                                <rect key="frame" x="171" y="788" width="72" height="30"/>
+                                <state key="normal" title="To paywall"/>
+                                <connections>
+                                    <segue destination="YTP-YU-cug" kind="show" id="vOA-DI-eCd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1C-Oh-SXP">
+                                <rect key="frame" x="189.5" y="439.5" width="35.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="v1C-Oh-SXP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KB5-wW-Gr9"/>
+                            <constraint firstItem="fbb-J8-N8P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qqg-3W-YIj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fbb-J8-N8P" secondAttribute="bottom" constant="44" id="bEc-gH-gxe"/>
+                            <constraint firstItem="v1C-Oh-SXP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="dTe-cm-ZXt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="v1C-Oh-SXP" secondAttribute="trailing" constant="16" id="mCT-ld-LMt"/>
+                            <constraint firstItem="v1C-Oh-SXP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nBw-qR-fLL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Welcome" id="AcP-c0-EG3">
+                        <barButtonItem key="rightBarButtonItem" id="oXc-Oh-PI7">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fRp-kd-jRv">
+                                <rect key="frame" x="350" y="7" width="44" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Log"/>
+                                <connections>
+                                    <segue destination="YaH-M5-Jvm" kind="presentation" id="Kxg-su-38u"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="infoLabel" destination="v1C-Oh-SXP" id="QlO-PS-JTJ"/>
+                        <outlet property="toPaywallButton" destination="fbb-J8-N8P" id="Kwr-WZ-SPm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="495.6521739130435" y="464.73214285714283"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aVC-Nk-Hlj">
+            <objects>
+                <navigationController id="9QE-aJ-2Yq" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Hel-7j-0sm">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="3mV-sL-m6O"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yZu-1k-zrW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-316" y="466"/>
+        </scene>
+        <!--Paywall-->
+        <scene sceneID="oD2-Hz-bgF">
+            <objects>
+                <viewController id="YTP-YU-cug" customClass="PaywallViewController" customModule="ApiTapiExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ok6-ls-CG5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="3je-g5-0xG">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uL4-e7-6By">
+                                <rect key="frame" x="148.5" y="433" width="117" height="30"/>
+                                <state key="normal" title="Make a purchase"/>
+                                <connections>
+                                    <action selector="purchase" destination="YTP-YU-cug" eventType="touchUpInside" id="tee-uT-qp1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1AD-FR-j4k">
+                                <rect key="frame" x="207" y="176" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1AD-FR-j4k" firstAttribute="centerX" secondItem="Ok6-ls-CG5" secondAttribute="centerX" id="1LI-87-YtA"/>
+                            <constraint firstItem="3je-g5-0xG" firstAttribute="centerX" secondItem="uL4-e7-6By" secondAttribute="centerX" id="EZP-4f-9S0"/>
+                            <constraint firstItem="3je-g5-0xG" firstAttribute="centerY" secondItem="uL4-e7-6By" secondAttribute="centerY" id="Wju-Rs-Fxt"/>
+                            <constraint firstItem="uL4-e7-6By" firstAttribute="centerX" secondItem="Ok6-ls-CG5" secondAttribute="centerX" id="cYR-6p-rDg"/>
+                            <constraint firstItem="uL4-e7-6By" firstAttribute="centerY" secondItem="Ok6-ls-CG5" secondAttribute="centerY" id="to2-BW-ZlF"/>
+                            <constraint firstItem="1AD-FR-j4k" firstAttribute="top" secondItem="18M-WC-ooe" secondAttribute="top" constant="88" id="u1Q-Vg-hm3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="18M-WC-ooe"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Paywall" id="h4b-3o-DRp">
+                        <barButtonItem key="rightBarButtonItem" id="k56-UL-kGp">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2aZ-x7-k92">
+                                <rect key="frame" x="350" y="7" width="44" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Log"/>
+                                <connections>
+                                    <segue destination="YaH-M5-Jvm" kind="presentation" id="3md-uv-UG3"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="3je-g5-0xG" id="IhR-pa-lBX"/>
+                        <outlet property="purchaseButton" destination="uL4-e7-6By" id="eLZ-bd-FYd"/>
+                        <outlet property="testLabel" destination="1AD-FR-j4k" id="qj8-S0-md5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ST2-GE-7H9" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1346" y="465"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Kxg-su-38u"/>
+    </inferredMetricsTieBreakers>
+</document>
