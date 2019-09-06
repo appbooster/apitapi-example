@@ -21,7 +21,7 @@ class WelcomeViewController: ShakeToResetDeviceTokenViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    infoLabel.text = "This app demonstrates how ApiTapi works.\n\nCurrent device token is\n\(ApiTapi.deviceToken)"
+    infoLabel.text = "This app demonstrates how ApiTapi works.\n\nCurrent device token is\n\(ApiTapi.deviceToken)\n\nDevice token is used for sending the events to analytics system.\n\nWhen subscription is confirmed ApiTapi sends event about a trial start and then about premium start to integrated systems."
   }
 
   override func viewDidAppear(_ animated: Bool) {

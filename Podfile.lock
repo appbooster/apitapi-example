@@ -1,20 +1,24 @@
 PODS:
   - Amplitude-iOS (4.7.1)
   - ApiTapiID (1.0.0)
+  - ApiTapiPurchases (1.0.0)
 
 DEPENDENCIES:
   - Amplitude-iOS
   - ApiTapiID
+  - ApiTapiPurchases
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Amplitude-iOS
     - ApiTapiID
+    - ApiTapiPurchases
 
 SPEC CHECKSUMS:
   Amplitude-iOS: a0347ab05f2d196e6bbb22cc6f62eea33b5a035b
   ApiTapiID: 09665fd77437c5bff570dbfcac2734732294a3f8
+  ApiTapiPurchases: f1c9ff11259449f142049a4ec2e98e27137fea53
 
-PODFILE CHECKSUM: 4a9c87acd280f9849c038fe108bcf97f199b78be
+PODFILE CHECKSUM: b2670966bfc17c1d29eb3299e3e36808fc6e73b4
 
 COCOAPODS: 1.6.1

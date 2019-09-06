@@ -6,5 +6,6 @@ target 'ApiTapiExample' do
   
   pod 'Amplitude-iOS'
   pod 'ApiTapiID'
+  pod 'ApiTapiPurchases'
 
 end

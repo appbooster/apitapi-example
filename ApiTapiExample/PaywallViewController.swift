@@ -52,6 +52,18 @@ class PaywallViewController: UIViewController {
                    onSuccess: { [weak self] in
                     log("[ApiTapiExample] Purchase success")
 
+                    let productInfo = Store.productInfoBy(productIdentifier)
+
+                    ApiTapi.trackPurchase(productId: productIdentifier,
+                                          revenue: productInfo.revenue,
+                                          currency: productInfo.currency) { error in
+                                            if let error = error {
+                                              log("[ApiTapiExample] Tracking purchase error: \(error)")
+                                            } else {
+                                              log("[ApiTapiExample] Tracking purchase success")
+                                            }
+                    }
+
                     self?.change(isActive: false)
       },
                    onFailure: { [weak self] error in
